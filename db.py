@@ -17,6 +17,9 @@ except Exception:
 logger = logging.getLogger(__name__)
 
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+print(">>> DATABASE_URL from env:", repr(os.environ.get("DATABASE_URL")))
+
 if not DATABASE_URL:
     raise RuntimeError("DATABASE_URL is not set in environment or .env file")
 
